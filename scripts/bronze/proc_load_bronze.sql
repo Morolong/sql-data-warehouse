@@ -1,3 +1,9 @@
+--This script is a stored procedure that loads data into the 'bronze' schema from external CSV files. 
+--It Truncates the bronze tables beofre loading data 
+--Uses the "Bulk INSERT' command to load data from csv Files to bronze tables. 
+-- This stored procedure does not accept any parameters or retun any values. 
+--Usage: e.g EXEC bronze.load_bronze; 
+
 USE DataWarehouse;
 GO
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
