@@ -1,3 +1,15 @@
+/*
+===========================================================
+Stored Procedure: Load Silver Layer (Bronze -> Silver)
+===========================================================
+This stored procedure performs the ETL process to populate the 'silver' schema tables from the 'bronze' schema. 
+Actions performed: 
+	- Truncates Silver tables 
+	- Inserts transformed and cleansed data from Bronze into Silver tables. 
+
+This stored procedure dores not accept any parameters or return any values. 
+*/
+
 USE DataWarehouse
 GO
 CREATE OR ALTER PROCEDURE silver.load_silver AS
