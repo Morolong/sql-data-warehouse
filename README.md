@@ -107,32 +107,28 @@ data-warehouse-project/
 │   ├── source_erp/
 │
 ├── docs/
-│   ├── data_architecture.drawio
 │   ├── data_flow.drawio
-│   ├── data_models.drawio
-│   ├── etl.drawio
+│   ├── high_level_architecture.drawio
+│   ├── integration_model.drawio
+│   ├── sales_data_mart.drawio
 │   ├── data_catalog.md
-│   ├── naming_conventions.md
-│   └── requirements.md
 │
 ├── scripts/
 │   ├── bronze/
-│   │   ├── load_bronze.sql
-│   │   └── staging_tables.sql
+│   │   ├── ddl_bronze.sql
+│   │   └── proc_load_bronze.sql
 │   │
-│   ├── silver/
-│   │   ├── transform_silver.sql
-│   │   └── data_cleaning.sql
+│   ├── gold/
+│   │   ├── ddl_gold.sql
 │   │
-│   └── gold/
-│       ├── create_dimensions.sql
-│       ├── create_facts.sql
-│       └── analytical_views.sql
+│   └── silver/
+│       ├── ddl_silver.sql
+│       ├── proc_load_silver.sql
+│   ├── init_database.sql
 │
 ├── tests/
-│   ├── data_quality_checks.sql
-│   └── validation_queries.sql
+│   ├── quality_checks_gold.sql
+│   └── quality_checks_silver.sql
 │
-├── README.md
 ├── LICENSE
-└── .gitignore
+├── README.md
